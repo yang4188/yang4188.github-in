@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<!--<link rel="stylesheet" href="../css/bootstrap3.min.css" />--> 
+		<script type="text/javascript" src="js/jquery-3.2.0.min.js" ></script>
+		<script type="text/javascript" src="js/popper.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+		<script>
+			function checkform(){
+				if($("#uname").val()==""){
+					alert("用户名不能为空");
+					$("#uname").focus();
+					return false;
+				}
+				
+				if($("#pwd").val()==""){
+					alert("密码不能为空");
+					$("#pwd").focus();
+					return false;
+				}
+				
+				if($("#code").val()==""){
+					alert("验证密不能为空");
+					$("#code").focus();
+					return false;
+				}
+
+				
+			}
+		</script>
+		<style>
+			body{background: url(img/bg.jpg);
+			background-position: center 0;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			-webkit-background-size:cover;
+			-o-background-size:cover;
+			-moz-background-size:cover;
+			-ms-background-size:cover;
+		}
+		</style>
+	</head>
+	<body background="img/bg.jpg">
+		<div class="row" style="margin: 0; padding: 0;height: 140px;"></div>
+		<div class="row" style="margin: 0; padding: 0;">
+			<div class="w-40 mx-auto">
+				<h1 class="text-center">登录之后更完美</h1>
+				<div id="" style="background: black; opacity: 0.3; color: beige; height: 80%;">
+						
+					<form action="login.php" method="post" enctype="multipart/form-data" style="margin: 0; padding: 0;">
+							
+					
+						<table width="100%" height="200px">
+							<tr align="center"><td align="right">用户名:</td><td><input type="text" id="uname" name="uname" placeholder="请输入用户名" /> </td></tr>
+							<tr align="center"><td align="right">密码:</td><td><input type="password" id="pwd" name="pwd" placeholder="请输入密码" />
+							<tr align="center"><td align="right">验证码:</td><td><input type="text" id="code" name="code" placeholder="请输入验证码" /><td align="left"><td><img src="code.php" onclick="this.src='code.php?nocache='+Math.random()" alt="点击换一张" /></td></td></td></tr>
+							<tr align="center"><td></td><td colspan="2"><input type="submit" value="提交" onclick="return checkform()" name="submit" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="register.html">还没有账号</a></td></tr>
+						</table>
+					
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
